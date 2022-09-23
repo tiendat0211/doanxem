@@ -1,11 +1,11 @@
 import React from "react";
 import { PressableProps } from "react-native";
-import { fontSize16 } from "src/styles/AppFonts";
-import { useTheme } from "../../hooks/useSetting";
 import AppColors from "../../styles/AppColors";
 import { unit32, unit4, unit16, unit20, unit8, unit12 } from "../../utils/appUnit";
 import AppText from "../AppText/AppText";
 import PressView from "../PressView/PressView";
+import { useTheme } from "../../hooks/useTheme";
+import { fontSize16 } from "../../styles/AppFonts";
 
 
 interface SelectItemProps extends PressableProps {
@@ -33,7 +33,7 @@ const SelectItem: React.FC<SelectItemProps> = (props) => {
       fontType={"medium"}
       style={{
         fontSize: fontSize16,
-        color: focused ? AppColors.color_white : colorPallet.color_text_3,
+        color: focused ? AppColors.color_white : AppColors.color_primary,
       }}>
       {title}
     </AppText>

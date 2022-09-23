@@ -16,6 +16,7 @@ import ResetPasswordScreen from "./src/screens/ResetPasswordScreen/ResetPassword
 import MyDrawer from "./src/screens/HomeScreen/MyDrawer";
 import RuleWithLoginScreen from "./src/screens/RuleWithLoginScreen/RuleWithLoginScreen";
 import SettingScreen from "./src/components/SettingScreen/SettingScreen";
+import FilterScreen from "./src/screens/FilterScreen/FilterScreen";
 
 export type RootStackParamList = {
   SplashScreen: undefined,
@@ -29,6 +30,7 @@ export type RootStackParamList = {
   RuleWithLoginScreen: undefined,
   MyDrawer: undefined,
   SettingScreen: undefined,
+  FilterScreen: undefined,
 };
 
 export const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -75,9 +77,11 @@ const App = () => {
               <RootStack.Screen
                 name={"SettingScreen"}
                 component={SettingScreen} />
+
+              <RootStack.Screen
+                name={"FilterScreen"}
+                component={FilterScreen} />
             </>
-
-
             :
             <>
               <RootStack.Screen

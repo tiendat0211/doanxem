@@ -1,8 +1,8 @@
 import React from "react";
 import { View } from "react-native";
-import PressView from "src/components/PressView/PressView";
-import SelectItem from "src/components/SelectionView/SelectItem";
-import { isListContain } from "src/utils/Utils";
+import { isListContain } from "../../../utils/Utils";
+import PressView from "../../../components/PressView/PressView";
+import SelectItem from "../../../components/SelectionView/SelectItem";
 
 
 interface SectionComponentProps<T> {
