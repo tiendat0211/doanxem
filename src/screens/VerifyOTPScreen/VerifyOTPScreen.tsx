@@ -132,7 +132,7 @@ const VerifyOTPScreen: React.FC = () => {
           justifyContent: 'center',
         }}>
           <AppText
-            fontType="medium"
+            // fontType="medium"
             style={
             {
               color: colorPallet.color_text_blue_3,

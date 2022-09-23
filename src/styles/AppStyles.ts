@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { unit24 } from "../utils/appUnit";
 
 const AppStyles = StyleSheet.create({
   container: {
@@ -12,6 +13,10 @@ const AppStyles = StyleSheet.create({
   alignRow: {
     flexDirection: 'row',
     alignItems: 'center'
+  },
+  icon24:{
+    width:unit24,
+    height:unit24
   }
 })
 

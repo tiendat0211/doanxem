@@ -112,12 +112,11 @@ export const fontWeight700 = '700';
 export const fontWeight800 = '800';
 export const fontWeight900 = '900';
 
-export const FontName = 'PlusJakartaSans-';
+export const FontName = 'Averta-';
 
 export  const AppFonts = {
   bold: FontName + "Bold",
-  semiBold: FontName + "SemiBold",
-  medium: FontName + 'Medium',
+  semiBold: FontName + "Semibold",
   regular: FontName + "Regular",
 }
 
