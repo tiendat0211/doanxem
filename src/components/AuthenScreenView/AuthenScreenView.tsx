@@ -34,11 +34,6 @@ const AuthenScreenView: React.FC<AuthenScreenViewProps> = ({
       />
 
       <AppText
-<<<<<<< HEAD
-
-=======
-        // fontType="medium"
->>>>>>> _nam
         style={{
           textAlign: "center",
           fontSize: fontSize18,

@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Button, Dimensions, Image, View } from "react-native";
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import {NavigationContainerRef } from "@react-navigation/native";
-
 import HomeScreen from "./HomeScreen";
 import { useLanguage } from "../../hooks/useLanguage";
 import CustomDrawer from "../../components/CustomDrawer/CustomDrawer";
@@ -10,17 +9,11 @@ import { useTheme } from "../../hooks/useTheme";
 import { unit0, unit20, unit28, unit35, unit40 } from "../../utils/appUnit";
 import AppColors from "../../styles/AppColors";
 import SearchScreen from "../SearchScreen/SearchScreen";
-<<<<<<< HEAD
 import { IC_HOME, IC_INFO, IC_SEARCH, IC_USER2 } from "../../assets/path";
 import { fontSize20 } from "../../styles/AppFonts";
 import RuleScreen from "../RuleScreen/RuleScreen";
 import ProfileScreen from "../ProfileScreen/ProfileSceen";
-=======
-import { IC_HOME, IC_INFO, IC_SEARCH } from "../../assets/path";
-import { AppFonts, fontSize20 } from "../../styles/AppFonts";
-import RuleScreen from "../RuleScreen/RuleScreen";
-import NotificationScreen from '../NotificationScreen/NotificationScreen';
->>>>>>> _nam
+
 
 export const Drawer = createDrawerNavigator();
 
@@ -31,7 +24,7 @@ export default function MyDrawer() {
 
   return (
       <Drawer.Navigator
-      
+
         drawerContent={(props) => <CustomDrawer {...props}/> }
           screenOptions={{
             headerShown: false,
@@ -46,7 +39,7 @@ export default function MyDrawer() {
               fontFamily:AppFonts.semiBold,
               marginLeft: -10,
               fontSize: fontSize20,
-              
+
             }
           }}
       >
@@ -80,9 +73,8 @@ export default function MyDrawer() {
               />
           }}
         />
-       
+
         <Drawer.Screen
-<<<<<<< HEAD
           name={language?.User_profile}
           component={ProfileScreen}
           options={{
@@ -98,12 +90,8 @@ export default function MyDrawer() {
           }}
         />
         <Drawer.Screen
-          name={language?.Rule}
-          component={RuleScreen}
-=======
           name={language?.Notification}
           component={NotificationScreen}
->>>>>>> _nam
           options={{
             drawerIcon: ({focused}) =>
               <Image
@@ -149,7 +137,7 @@ export default function MyDrawer() {
         <Drawer.Screen
           name={language?.Rule}
           component={RuleScreen}
-          
+
           options={
             {
             drawerIcon: ({focused}) =>
