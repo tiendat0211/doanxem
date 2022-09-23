@@ -15,7 +15,7 @@ import VerifyOTPScreen from "./src/screens/VerifyOTPScreen/VerifyOTPScreen";
 import ResetPasswordScreen from "./src/screens/ResetPasswordScreen/ResetPasswordScreen";
 import MyDrawer from "./src/screens/HomeScreen/MyDrawer";
 import RuleWithLoginScreen from "./src/screens/RuleWithLoginScreen/RuleWithLoginScreen";
-import SettingScreen from "./src/components/SettingScreen/SettingScreen";
+import SettingScreen from "./src/screens/SettingScreen/SettingScreen";
 
 export type RootStackParamList = {
   SplashScreen: undefined,

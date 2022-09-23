@@ -42,7 +42,17 @@ const enLang: BaseLanguage = {
   hotTab: 'Hot',
   topTab: 'Top',
   newTab: 'Mới',
-  setting: 'Cài đặt'
+  setting: 'Cài đặt',
+  language:'Ngôn ngữ',
+  accountInfo:'Thông tin tài khoản',
+  blockList:'Danh sách chặn',
+  changePwd:'Thay đổi mật khẩu',
+  viewMode:'Chế độ hiển thị',
+  notiCenter:'Trung tâm thông báo',
+  appRate:'Đánh giá ứng dụng',
+  appShare:'Chia sẻ ứng dụng',
+  signOut:'Đăng xuất',
+  
 };
 
 export default enLang;

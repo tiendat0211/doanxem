@@ -10,7 +10,7 @@ import { useTheme } from "../../hooks/useTheme";
 import { unit0, unit20, unit28, unit35, unit40 } from "../../utils/appUnit";
 import AppColors from "../../styles/AppColors";
 import SearchScreen from "../SearchScreen/SearchScreen";
-import { IC_HOME, IC_INFO, IC_SEARCH } from "../../assets/path";
+import { IC_HOME, IC_INFO, IC_NOTI, IC_RANK, IC_SEARCH, IC_USER, IC_USER2 } from "../../assets/path";
 import { AppFonts, fontSize20 } from "../../styles/AppFonts";
 import RuleScreen from "../RuleScreen/RuleScreen";
 import NotificationScreen from '../NotificationScreen/NotificationScreen';
@@ -80,7 +80,7 @@ export default function MyDrawer() {
           options={{
             drawerIcon: ({focused}) =>
               <Image
-                source={IC_SEARCH}
+                source={IC_NOTI}
                 style={{
                   width:unit28,
                   height: unit28,
@@ -90,12 +90,12 @@ export default function MyDrawer() {
           }}
         />
          <Drawer.Screen
-          name={"Something2"}
+          name={language?.User_profile}
           component={RuleScreen}
           options={{
             drawerIcon: ({focused}) =>
               <Image
-                source={IC_SEARCH}
+                source={IC_USER2}
                 style={{
                   width:unit28,
                   height: unit28,
@@ -105,12 +105,12 @@ export default function MyDrawer() {
           }}
         />
          <Drawer.Screen
-          name={"Something"}
+          name={language?.Rank}
           component={RuleScreen}
           options={{
             drawerIcon: ({focused}) =>
               <Image
-                source={IC_SEARCH}
+                source={IC_RANK}
                 style={{
                   width:unit28,
                   height: unit28,

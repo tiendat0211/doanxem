@@ -30,7 +30,7 @@ const NotificationScreen: React.FC = () => {
       />
       <AppBar
         title={language?.Notification}
-        leftIcon={IC_NOTI}
+        leftIcon={IC_DRAWER}
         leftIconOnClick={()=>{
           NavigationRef.current?.dispatch(DrawerActions.openDrawer)
         }}

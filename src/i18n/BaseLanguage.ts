@@ -41,6 +41,16 @@ interface BaseLanguage {
   topTab: string;
   newTab: string;
   setting: string;
+  language:string;
+  accountInfo:string;
+  blockList:string;
+  changePwd:string;
+  viewMode:string;
+  notiCenter:string;
+  appShare:string;
+  appRate:string;
+  signOut:string;
+  
 }
 
 export default BaseLanguage;

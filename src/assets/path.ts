@@ -29,6 +29,14 @@ export const IC_RANK = require('./icons/ic_rank.png');
 export const IC_NEWTAB = require('./icons/ic_newTab.png');
 export const IC_HOTTAB = require('./icons/ic_hotTab.png');
 export const IC_TOPTAB = require('./icons/ic_topTab.png');
+export const IC_LANGUAGE = require('./icons/Language.png');
+export const IC_BLOCKLIST = require('./icons/UserMinus.png');
+export const IC_ACCINFO = require('./icons/User.png');
+export const IC_VIEWMODE = require('./icons/Display.png');
+export const IC_OUT = require('./icons/Out.png');
+export const IC_BELL = require('./icons/Bell.png');
+export const IC_STAR = require('./icons/Star.png');
+export const IC_APPSHARE = require('./icons/Share.png');
 
 
 // Files
