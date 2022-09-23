@@ -34,7 +34,7 @@ const AuthenScreenView: React.FC<AuthenScreenViewProps> = ({
       />
 
       <AppText
-        fontType="medium"
+
         style={{
           textAlign: "center",
           fontSize: fontSize18,
@@ -44,7 +44,7 @@ const AuthenScreenView: React.FC<AuthenScreenViewProps> = ({
         {name}
       </AppText>
       <AppText
-        fontType="regular"
+
         style={{
           textAlign: "center",
           fontSize: fontSize14,

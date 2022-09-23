@@ -250,7 +250,7 @@ const LoginOptions: React.FC<LoginOptionsProps> = ({
             alignItems: "center",
             justifyContent: "center",
             paddingVertical: unit14,
-            width: (Dimensions.get('screen').width - 56)/2,
+            width: (Dimensions.get('screen').width - 65)/2,
             backgroundColor: AppColors.color_white,
             borderRadius: unit6,
             borderColor:  colorPallet.color_divider_2,

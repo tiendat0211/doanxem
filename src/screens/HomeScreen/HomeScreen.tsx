@@ -18,7 +18,8 @@ import { DrawerActions, NavigationContainer } from "@react-navigation/native";
 import PressView from "../../components/PressView/PressView";
 import { NavigationRef } from "../../../App";
 import AppBar from "../../components/AppBar/AppBar";
-
+import CustomTabBar from "../../components/CustomTabBar/CustomTabBar";
+import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 
 const Tab = createMaterialTopTabNavigator();
 const Drawer = createDrawerNavigator();
@@ -30,6 +31,19 @@ const HomeScreen: React.FC = () => {
   const {colorPallet} = useTheme()
   const language = useLanguage();
 
+  const [index, setIndex] = React.useState(0);
+  const [routes] = React.useState([
+    { key: 'new', title: language?.newTab },
+    { key: 'top', title: language?.topTab },
+    { key: 'hot', title: language?.hotTab },
+  ]);
+
+  const renderScene = SceneMap({
+    new: NewTab,
+    hot: HotTab,
+    top: TopTab
+  });
+
 
 
   return (
@@ -39,58 +53,6 @@ const HomeScreen: React.FC = () => {
         barStyle={"dark-content"}
         backgroundColor={AppColors.color_transparent}
       />
-      {/*<View*/}
-      {/*  style={{*/}
-      {/*    marginTop: (Platform.OS === "android" ? StatusBar.currentHeight || 0 : 0) + unit12,*/}
-      {/*    paddingHorizontal: unit20,*/}
-      {/*    flexDirection:'row',*/}
-      {/*    alignItems:'center',*/}
-      {/*    paddingVertical: unit12,*/}
-      {/*    borderBottomWidth: unit1,*/}
-      {/*    borderBottomColor: colorPallet.color_divider_3*/}
-      {/*  }}*/}
-      {/*>*/}
-      {/*  <PressView*/}
-      {/*    onPress={() =>{*/}
-      {/*      NavigationRef.current?.dispatch(DrawerActions.openDrawer)*/}
-      {/*    } }*/}
-      {/*  >*/}
-      {/*    <Image*/}
-      {/*      source={IC_DRAWER}*/}
-      {/*      style={{*/}
-      {/*        width: unit24,*/}
-      {/*        height: unit24*/}
-      {/*      }}*/}
-      {/*    />*/}
-      {/*  </PressView>*/}
-
-      {/*  <View*/}
-      {/*    style={{*/}
-      {/*      flexGrow:1,*/}
-      {/*      justifyContent:'center',*/}
-      {/*      alignItems:'center'*/}
-      {/*  }}*/}
-      {/*  >*/}
-      {/*    <AppText*/}
-      {/*      style={{*/}
-      {/*        fontSize: fontSize20,*/}
-      {/*        color: colorPallet.color_text_blue_1,*/}
-      {/*    }}*/}
-      {/*    >*/}
-      {/*      {language?.Home}*/}
-      {/*    </AppText>*/}
-      {/*  </View>*/}
-
-      {/*  <Image*/}
-      {/*    source={IC_FILTER}*/}
-      {/*    style={{*/}
-      {/*      width: unit24,*/}
-      {/*      height: unit24*/}
-      {/*    }}*/}
-      {/*  />*/}
-
-      {/*</View>*/}
-
       <AppBar
         title={language?.Home}
         leftIcon={IC_DRAWER}
@@ -99,7 +61,7 @@ const HomeScreen: React.FC = () => {
           NavigationRef.current?.dispatch(DrawerActions.openDrawer)
         }}
         rightIconOnClick={()=>{
-
+          NavigationRef.current?.navigate('FilterScreen')
         }}
         titleStyle={{
           color: colorPallet.color_text_blue_1
@@ -110,68 +72,44 @@ const HomeScreen: React.FC = () => {
       />
 
 
-
-    <Tab.Navigator
-      screenOptions={{
-        tabBarActiveTintColor: AppColors.color_primary,
-        tabBarInactiveTintColor: colorPallet.color_text_blue_3,
-       tabBarLabelStyle:{
-         paddingVertical: unit5,
-         fontSize: fontSize18,
-         fontWeight:'700',
-         textTransform: 'none',
-       },
-      }}
-    >
-      <Tab.Screen
-        name= {language?.newTab}
-        component={NewTab}
-        options={{
-          tabBarIcon : ({focused}) => {
-            return <Image
-                source={IC_NEWTAB}
+      <TabView
+        navigationState={{ index, routes }}
+        renderScene={renderScene}
+        onIndexChange={setIndex}
+        renderTabBar={(props) => {
+          return <TabBar
+            {...props}
+            tabStyle={{flexDirection: 'row'}}
+            activeColor={AppColors.color_primary}
+            inactiveColor={colorPallet.color_text_blue_3}
+            indicatorStyle={{ backgroundColor: AppColors.color_primary }}
+            style={{
+              backgroundColor: AppColors.color_white,
+          }}
+            labelStyle={{
+              fontSize: fontSize18,
+              fontWeight: '700',
+              textTransform: 'none',
+            }}
+            renderIcon={ ({route, focused} ) => {
+              return <Image
+                source={
+                route.key === 'new'
+                  ? IC_NEWTAB
+                  :  route.key === 'top'
+                  ? IC_TOPTAB:
+                  IC_HOTTAB
+                }
                 style={{
                   height: unit24,
                   width: unit24,
-                  tintColor: focused? AppColors.color_primary : colorPallet.color_text_blue_3,
-                }}
-              />;
-          },
-        }}
-      />
-      <Tab.Screen
-        name={language?.topTab}
-        component={TopTab}
-        options={{
-          tabBarIcon : ({focused}) => {
-            return <Image
-              source={IC_TOPTAB}
-              style={{
-                height: unit24,
-                width: unit24,
-                tintColor: focused? AppColors.color_primary : colorPallet.color_text_blue_3
+                  tintColor : focused ? AppColors.color_primary : colorPallet.color_text_blue_3
               }}
-            />;
-          }
+              />
+            }}
+          />
         }}
       />
-      <Tab.Screen
-        name={language?.hotTab}
-        component={HotTab}
-        options={{
-          tabBarIcon : ({focused}) => {
-            return <Image
-              source={IC_HOTTAB}
-              style={{
-                height: unit24,
-                width: unit24,
-                tintColor: focused? AppColors.color_primary : colorPallet.color_text_blue_3
-              }}
-            />;
-          }
-        }}
-      />
-    </Tab.Navigator>
 
       <Button
           onPress={

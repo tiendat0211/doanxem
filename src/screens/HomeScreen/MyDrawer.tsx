@@ -10,9 +10,10 @@ import { useTheme } from "../../hooks/useTheme";
 import { unit0, unit20, unit28, unit35 } from "../../utils/appUnit";
 import AppColors from "../../styles/AppColors";
 import SearchScreen from "../SearchScreen/SearchScreen";
-import { IC_HOME, IC_INFO, IC_SEARCH } from "../../assets/path";
+import { IC_HOME, IC_INFO, IC_SEARCH, IC_USER2 } from "../../assets/path";
 import { fontSize20 } from "../../styles/AppFonts";
 import RuleScreen from "../RuleScreen/RuleScreen";
+import ProfileScreen from "../ProfileScreen/ProfileSceen";
 
 export const Drawer = createDrawerNavigator();
 
@@ -64,6 +65,21 @@ export default function MyDrawer() {
             drawerIcon: ({focused}) =>
               <Image
                 source={IC_SEARCH}
+                style={{
+                  width:unit28,
+                  height: unit28,
+                  tintColor: focused ? AppColors.color_primary : colorPallet.color_text_blue_3
+                }}
+              />
+          }}
+        />
+        <Drawer.Screen
+          name={language?.User_profile}
+          component={ProfileScreen}
+          options={{
+            drawerIcon: ({focused}) =>
+              <Image
+                source={IC_USER2}
                 style={{
                   width:unit28,
                   height: unit28,

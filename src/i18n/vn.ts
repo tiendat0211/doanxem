@@ -1,6 +1,8 @@
 import BaseLanguage from "../i18n/BaseLanguage";
+import enLang from "./en";
 
 const vnLang: BaseLanguage = {
+  ...enLang,
   onboarding_title: 'Đắm chìm vào không gian đầy sương khói mờ',
   onboarding_slogan: 'Thả mình vào thế giới bao quanh, đắm chìm vào không gian ảo ảnh',
   login_title: 'Chào đồng chí tới với Đoán Xem',

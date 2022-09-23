@@ -42,7 +42,12 @@ const enLang: BaseLanguage = {
   hotTab: 'Hot',
   topTab: 'Top',
   newTab: 'Mới',
-  setting: 'Cài đặt'
+  setting: 'Cài đặt',
+  enterKeyWord: 'Tìm kiếm sự hài hước đâu đó',
+  saveTab: 'Đã lưu' ,
+  waitTab: 'Đợi duyệt',
+  postedTab: 'Đã đăng',
+  filter: 'Lọc nội dung',
 };
 
 export default enLang;

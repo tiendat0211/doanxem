@@ -41,6 +41,11 @@ interface BaseLanguage {
   topTab: string;
   newTab: string;
   setting: string;
+  enterKeyWord: string;
+  saveTab: string;
+  waitTab:string;
+  postedTab: string;
+  filter: string;
 }
 
 export default BaseLanguage;

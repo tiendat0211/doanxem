@@ -22,6 +22,7 @@ export const IC_FILTER = require('./icons/ic_fillter.png');
 export const IC_ARROWLEFT = require('./icons/ic_arrowLeft.png');
 export const IC_SETTING = require('./icons/ic_setting.png');
 export const IC_SEARCH = require('./icons/ic_Search.png');
+export const IC_SEARCH2 = require('./icons/ic_search2.png');
 export const IC_HOME= require('./icons/ic_Home.png');
 export const IC_INFO = require('./icons/ic_info.png');
 export const IC_NOTI = require('./icons/ic_noti.png');
@@ -29,6 +30,9 @@ export const IC_RANK = require('./icons/ic_rank.png');
 export const IC_NEWTAB = require('./icons/ic_newTab.png');
 export const IC_HOTTAB = require('./icons/ic_hotTab.png');
 export const IC_TOPTAB = require('./icons/ic_topTab.png');
+export const IC_FILTERCHECK = require('./icons/ic_filterChecked.png');
+export const IC_GAME = require('./icons/ic_gameController.png');
+export const IC_CHECK = require('./icons/ic_Check.png');
 
 
 // Files
