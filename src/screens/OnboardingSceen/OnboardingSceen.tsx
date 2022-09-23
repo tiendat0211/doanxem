@@ -41,7 +41,7 @@ const OnboardingScreen: React.FC = () => {
       />
       <Image source={IMG_ONBOARDING} style={{width: 334.5, height: 336.5}}/>
       <AppText
-        fontType="medium"
+        // fontType="medium"
         style={{
           textAlign: "center",
           fontSize: fontSize24,

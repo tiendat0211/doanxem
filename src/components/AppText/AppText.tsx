@@ -1,12 +1,12 @@
 import React from 'react';
 import {Text, TextProps} from 'react-native';
 
-export type AppFontType = 'bold' | 'regular' | 'semiBold' | 'medium'
+export type AppFontType = 'bold' | 'regular' | 'semiBold'
 
 interface AppTextProps extends TextProps {
   fontType?: AppFontType;
 }
-export const FontName = 'PlusJakartaSans-';
+export const FontName = 'Averta-' ;
 const AppText: React.FC<AppTextProps> = props => {
   const {children, fontType} = props;
 
@@ -14,9 +14,7 @@ const AppText: React.FC<AppTextProps> = props => {
     fontType === 'bold'
       ? FontName + 'Bold'
       : fontType === 'semiBold'
-        ? FontName + 'SemiBold'
-        : fontType === 'medium'
-          ? FontName + 'Medium'
+        ? FontName + 'Semibold'
           : FontName + 'Regular';
   return (
     <Text
