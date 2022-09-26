@@ -46,6 +46,12 @@ interface BaseLanguage {
   waitTab:string;
   postedTab: string;
   filter: string;
+  languageSetting: string;
+  viewMode: string;
+  notiSetting: string;
+  blockUser: string;
+  infoUser: string;
+  changPass: string;
 }
 
 export default BaseLanguage;

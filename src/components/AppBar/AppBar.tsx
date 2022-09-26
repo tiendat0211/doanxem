@@ -57,14 +57,10 @@ const AppBar: React.FC<AppBarProps> = (
   return <View style={[styles.container, containerStyle]}>
     <PressView
       onPress={leftIconOnClick}
-      style={
-        [
-          leftIconStyle,
-        ]
-      }>
+     >
       <Image
         source={leftIcon}
-        style={styles.leftIcon}
+        style={[leftIconStyle,styles.leftIcon]}
       />
     </PressView>
     <Text
@@ -74,15 +70,10 @@ const AppBar: React.FC<AppBarProps> = (
     >{title}</Text>
 
     <PressView
-      onPress={rightIconOnClick}
-      style={
-        [
-          rightIconStyle,
-        ]
-      }>
+      onPress={rightIconOnClick}>
       <Image
         source={rightIcon}
-        style={styles.rightIcon}
+        style={[rightIconStyle ,styles.rightIcon]}
       />
     </PressView>
   </View>;

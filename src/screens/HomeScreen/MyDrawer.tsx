@@ -9,10 +9,11 @@ import { useTheme } from "../../hooks/useTheme";
 import { unit0, unit20, unit28, unit35, unit40 } from "../../utils/appUnit";
 import AppColors from "../../styles/AppColors";
 import SearchScreen from "../SearchScreen/SearchScreen";
-import { IC_HOME, IC_INFO, IC_SEARCH, IC_USER2 } from "../../assets/path";
-import { fontSize20 } from "../../styles/AppFonts";
+import { IC_HOME, IC_INFO, IC_NOTI, IC_SEARCH, IC_USER2 } from "../../assets/path";
+import { AppFonts, fontSize20 } from "../../styles/AppFonts";
 import RuleScreen from "../RuleScreen/RuleScreen";
 import ProfileScreen from "../ProfileScreen/ProfileSceen";
+import NotificationScreen from '../NotificationScreen/NotificationScreen';
 
 
 export const Drawer = createDrawerNavigator();
@@ -95,7 +96,7 @@ export default function MyDrawer() {
           options={{
             drawerIcon: ({focused}) =>
               <Image
-                source={IC_SEARCH}
+                source={IC_NOTI}
                 style={{
                   width:unit28,
                   height: unit28,

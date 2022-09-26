@@ -15,8 +15,13 @@ import VerifyOTPScreen from "./src/screens/VerifyOTPScreen/VerifyOTPScreen";
 import ResetPasswordScreen from "./src/screens/ResetPasswordScreen/ResetPasswordScreen";
 import MyDrawer from "./src/screens/HomeScreen/MyDrawer";
 import RuleWithLoginScreen from "./src/screens/RuleWithLoginScreen/RuleWithLoginScreen";
-import SettingScreen from "./src/components/SettingScreen/SettingScreen";
+import SettingScreen from "./src/screens/SettingScreen/SettingScreen";
 import FilterScreen from "./src/screens/FilterScreen/FilterScreen";
+import LanguageScreen from "./src/screens/LanguageScreen/Language";
+import ViewModeScreen from "./src/screens/ViewModeScreen/ViewModeScreen";
+import NotiSettingScreen from "./src/screens/NotiSettingScreen/NotiSettingScreen";
+import BlockUserScreen from "./src/screens/BlockUserScreen/BlockUserScreen";
+import DetailProfileScreen from "./src/screens/DetailProfileScreen/DetailProfileScreen";
 
 export type RootStackParamList = {
   SplashScreen: undefined,
@@ -31,6 +36,11 @@ export type RootStackParamList = {
   MyDrawer: undefined,
   SettingScreen: undefined,
   FilterScreen: undefined,
+  LanguageScreen: undefined,
+  ViewModeScreen: undefined,
+  NotiSettingScreen: undefined,
+  BlockUserScreen: undefined,
+  DetailProfileScreen: undefined
 };
 
 export const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -81,6 +91,22 @@ const App = () => {
               <RootStack.Screen
                 name={"FilterScreen"}
                 component={FilterScreen} />
+
+              <RootStack.Screen
+                name={"LanguageScreen"}
+                component={LanguageScreen} />
+              <RootStack.Screen
+                name={"ViewModeScreen"}
+                component={ViewModeScreen} />
+              <RootStack.Screen
+                name={"NotiSettingScreen"}
+                component={NotiSettingScreen} />
+              <RootStack.Screen
+                name={"BlockUserScreen"}
+                component={BlockUserScreen} />
+              <RootStack.Screen
+                name={"DetailProfileScreen"}
+                component={DetailProfileScreen} />
             </>
             :
             <>

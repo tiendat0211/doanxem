@@ -30,7 +30,6 @@ const SelectItem: React.FC<SelectItemProps> = (props) => {
     }, props.style as {}]}
   >
     <AppText
-      fontType={"medium"}
       style={{
         fontSize: fontSize16,
         color: focused ? AppColors.color_white : AppColors.color_primary,

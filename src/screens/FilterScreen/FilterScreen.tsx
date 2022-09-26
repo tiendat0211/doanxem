@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button, FlatList, Image, Platform, SafeAreaView, ScrollView, StatusBar, Text, View } from "react-native";
 import AppStyles from "../../styles/AppStyles";
-import useAuth from "../../hooks/useAuth";
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import AppColors from "../../styles/AppColors";
 import { useTheme } from "../../hooks/useTheme";
 import {
@@ -22,12 +20,9 @@ import { IC_ARROWLEFT, IC_CHECK, IC_DRAWER, IC_FILTER, IC_FILTERCHECK, IC_GAME }
 import AppText from "../../components/AppText/AppText";
 import { useLanguage } from "../../hooks/useLanguage";
 import { fontSize14, fontSize16, fontSize20 } from "../../styles/AppFonts";
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { DrawerActions, NavigationContainer } from "@react-navigation/native";
 import PressView from "../../components/PressView/PressView";
 import { NavigationRef } from "../../../App";
 import AppBar from "../../components/AppBar/AppBar";
-import SearchBar from "../../components/SearchBar/SearchBar";
 
 const FakeData = [
   {

@@ -79,7 +79,10 @@ const HomeScreen: React.FC = () => {
         renderTabBar={(props) => {
           return <TabBar
             {...props}
-            tabStyle={{flexDirection: 'row'}}
+            tabStyle={{
+              flexDirection: 'row',
+              paddingVertical: unit15,
+            }}
             activeColor={AppColors.color_primary}
             inactiveColor={colorPallet.color_text_blue_3}
             indicatorStyle={{ backgroundColor: AppColors.color_primary }}

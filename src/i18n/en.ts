@@ -48,6 +48,12 @@ const enLang: BaseLanguage = {
   waitTab: 'Đợi duyệt',
   postedTab: 'Đã đăng',
   filter: 'Lọc nội dung',
+  languageSetting: 'Thay đổi ngôn ngữ',
+  viewMode: 'Chế độ hiển thị',
+  notiSetting: 'Trung tâm thông báo',
+  blockUser: 'Danh sách chặn',
+  infoUser: 'Thông tin tài khoản',
+  changPass: 'Thay đổi mật mã',
 };
 
 export default enLang;

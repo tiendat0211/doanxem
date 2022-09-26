@@ -32,7 +32,18 @@ export const IC_HOTTAB = require('./icons/ic_hotTab.png');
 export const IC_TOPTAB = require('./icons/ic_topTab.png');
 export const IC_FILTERCHECK = require('./icons/ic_filterChecked.png');
 export const IC_GAME = require('./icons/ic_gameController.png');
-export const IC_CHECK = require('./icons/ic_Check.png');
+export const IC_DETAILPROFILE = require('./icons/ic_detailProfile.png');
+export const IC_BLOCKUSER = require('./icons/ic_blockUser.png');
+export const IC_LANGUAGE = require('./icons/ic_language.png');
+export const IC_VIEWMODE = require('./icons/ic_viewMode.png');
+export const IC_BELL = require('./icons/ic_bell.png');
+export const IC_SHARE = require('./icons/ic_share.png');
+export const IC_STAR = require('./icons/ic_star.png');
+export const IC_LOGOUT = require('./icons/ic_logOut.png');
+export const IC_ENGLISH = require('./icons/ic_english.png');
+export const IC_VIETNAM = require('./icons/ic_vietnam.png');
+export const IC_CHECK2 = require('./icons/ic_Check.png');
+export const IC_TRASH= require('./icons/ic_trash.png');
 
 
 // Files
