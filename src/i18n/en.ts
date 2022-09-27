@@ -53,6 +53,16 @@ const enLang: BaseLanguage = {
   appShare:'Chia sẻ ứng dụng',
   signOut:'Đăng xuất',
   
+  enterKeyWord: 'Tìm kiếm sự hài hước đâu đó',
+  saveTab: 'Đã lưu' ,
+  waitTab: 'Đợi duyệt',
+  postedTab: 'Đã đăng',
+  filter: 'Lọc nội dung',
+  languageSetting: 'Thay đổi ngôn ngữ',
+  notiSetting: 'Trung tâm thông báo',
+  blockUser: 'Danh sách chặn',
+  infoUser: 'Thông tin tài khoản',
+  changPass: 'Thay đổi mật mã',
 };
 
 export default enLang;

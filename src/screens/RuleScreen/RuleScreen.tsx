@@ -15,6 +15,7 @@ import { DrawerActions, NavigationContainer } from "@react-navigation/native";
 import PressView from "../../components/PressView/PressView";
 import { NavigationRef } from "../../../App";
 import TextRule from "../../components/TextRule/TextRule";
+import AppBar from "../../components/AppBar/AppBar";
 
 
 const RuleScreen: React.FC = () => {
@@ -28,49 +29,19 @@ const RuleScreen: React.FC = () => {
         barStyle={"dark-content"}
         backgroundColor={AppColors.color_transparent}
       />
-      <View
-        style={{
-          marginTop: (Platform.OS === "android" ? StatusBar.currentHeight || 0 : 0) + unit12,
-          paddingHorizontal: unit20,
-          flexDirection:'row',
-          alignItems:'center',
-          paddingVertical: unit12,
-          borderBottomWidth: unit1,
-          borderBottomColor: colorPallet.color_divider_3,
+      <AppBar
+        title={language?.Rule}
+        leftIcon={IC_DRAWER}
+        leftIconOnClick={()=>{
+          NavigationRef.current?.dispatch(DrawerActions.openDrawer)
         }}
-      >
-        <PressView
-          onPress={() =>{
-            NavigationRef.current?.dispatch(DrawerActions.openDrawer)
-          } }
-        >
-          <Image
-            source={IC_DRAWER}
-            style={{
-              width: unit24,
-              height: unit24
-            }}
-          />
-        </PressView>
-
-        <View
-          style={{
-            flexGrow:1,
-            justifyContent:'center',
-            alignItems:'center'
-          }}
-        >
-          <AppText
-            style={{
-              fontSize: fontSize20,
-              color: colorPallet.color_text_blue_1,
-            }}
-          >
-            {language?.Rule}
-          </AppText>
-        </View>
-      </View>
-
+        titleStyle={{
+          color: colorPallet.color_text_blue_1
+        }}
+        containerStyle={{
+          borderBottomColor:colorPallet.color_divider_3
+        }}
+      />
       <ScrollView style={{flex: 1}}>
         <TextRule/>
       </ScrollView>

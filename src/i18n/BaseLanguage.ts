@@ -45,12 +45,22 @@ interface BaseLanguage {
   accountInfo:string;
   blockList:string;
   changePwd:string;
-  viewMode:string;
   notiCenter:string;
   appShare:string;
   appRate:string;
   signOut:string;
   
+  enterKeyWord: string;
+  saveTab: string;
+  waitTab:string;
+  postedTab: string;
+  filter: string;
+  languageSetting: string;
+  viewMode: string;
+  notiSetting: string;
+  blockUser: string;
+  infoUser: string;
+  changPass: string;
 }
 
 export default BaseLanguage;
